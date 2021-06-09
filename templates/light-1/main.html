@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bs.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>TnT Manufacturers</title>
+</head>
+
+<body>
+    <div id="main-cover-content">
+        <div class="wrapper">
+            <h1>
+                Product Catalogue
+            </h1>
+            <h3>
+                TnT Manufacturers
+            </h3>
+        </div>
+    </div>
+
+
+    <!-- EXTRA CONTENT -->
+    {% for key,value in products.items() %}
+    <div class="secondary-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>
+                        {{key}}
+                    </h1>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                {% for product in value %}
+                <!-- Product -->
+                        <div class="col-xs-6">
+                            <div class="product-wrapper">
+                                <div class="row">
+                                    <div class="col-xs-12 center">
+                                        <img src="{% if product.Image is sameas false %} assets/placeholder.png {% else %} {{product.Image}} {% endif %}" class="img-responsive" />
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <ul class="list-unstyled">
+                                            <li class="center">
+                                                <h4>{{product.Code}}</h4>
+                                            </li>
+                                            <li>
+                                                <p><strong>Material:</strong> {{product.Code}}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Finish:</strong> {{product.Finish}}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Breadth:</strong> {{product.Breadth}}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Length:</strong> {{product.Length}}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Radius:</strong> {{product.Radius}}</p>
+                                            </li>
+        
+                                            <li>
+                                                <p><strong>Rate:</strong> {{product.Rate}}</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- ./Product -->
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- ./EXTRA CONTENT -->
+
+</body>
+
+</html>

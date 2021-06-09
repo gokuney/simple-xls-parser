@@ -1,0 +1,49 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100vh;
+    position: relative;
+}
+
+#main-cover-content{
+    height: 100vh;
+}
+
+#main-cover-content .wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.secondary-content{
+    background-color: #31708f;
+    min-height: 100vh;
+    height: auto;
+    color:#fff;
+}
+
+.secondary-content:nth-child(2n+1){
+    background-color: brown;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.center img{
+    margin: 0 auto;
+}
+
+.product-wrapper {
+    padding: 24px;
+    margin-bottom: 100px;
+    border-radius: 70px 0px;
+    background: rgba(0,0,0,0.2);
+    box-shadow: inset 1px 1px 11px 2px #000;
+}
+
+.product-wrapper  img{
+    height: 300px!important;
+}

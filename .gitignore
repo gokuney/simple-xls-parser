@@ -1,0 +1,26 @@
+env
+output
+output.zip
+book.xlsx
+!**/__pycache__/
+__pycache__/
+*.py[cod]
+.env
+docker.env
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+logs
+*.logs
+*.log
+
+.project
+.vscode
