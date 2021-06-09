@@ -29,14 +29,16 @@ class XLSProcessor:
 
     def _allBalnks(self, record):
         resp = True
+        count = 0
         for key in record:
             # print("KEY {key} record {record}".format(key=key,record=str(record[key])))
-            if str(record[key]) != "nan" or None:
-                resp = False
-        return resp
+            if str(record[key]) == "N/A":
+                count = count+1
+        
+        return count > 4
 
     def _getRelevantRowImage(self, images, index):
-        fileName = false
+        fileName = None
         for imageLoc in images._images:
             if str(index) in imageLoc:
                 # Save this image
